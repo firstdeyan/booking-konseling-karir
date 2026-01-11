@@ -29,7 +29,7 @@ export function FooterInfo() {
     el("p", { style: "display:flex;align-items:center;gap:8px;" }, [
       iconSvg("M3 11l18-5-5 18-5-5-5 5z"),
       "Google Maps: ",
-      el("a", { href: "https://share.google/dKWfrJDnelBPUmvcm", target: "_blank" }, "Lihat lokasi di Maps")
+      el("a", { href: "https://maps.app.goo.gl/dfmpJx9c5GD7wx8x6", target: "_blank" }, "Lihat lokasi di Maps")
     ]),
 
     el("p", { style: "display:flex;align-items:center;gap:8px;" }, [

@@ -32,6 +32,7 @@ export function TestimonialCarousel() {
   ]);
 
   const track = el("div", {
+    class: "testimonial-track",
     style: "display:grid;grid-template-columns:repeat(3,1fr);gap:16px;transition:transform 0.4s ease;"
   });
 
@@ -55,9 +56,13 @@ export function TestimonialCarousel() {
   let items = [];
   let index = 0;
 
+  function perPage() {
+    return window.innerWidth <= 640 ? 2 : 3;
+  }
+
   function render() {
     track.innerHTML = "";
-    const visible = items.slice(index, index + 3);
+    const visible = items.slice(index, index + perPage());
     if (visible.length === 0 && items.length > 0) {
       index = 0;
       return render();
@@ -75,7 +80,7 @@ export function TestimonialCarousel() {
   }
 
   prevBtn.addEventListener("click", () => {
-    index = Math.max(0, index - 3);
+    index = Math.max(0, index - perPage());
     track.style.transform = "translateX(-20px)";
     setTimeout(() => {
       track.style.transform = "translateX(0)";
@@ -84,13 +89,16 @@ export function TestimonialCarousel() {
   });
 
   nextBtn.addEventListener("click", () => {
-    index = Math.min(items.length - 1, index + 3);
+    index = Math.min(items.length - 1, index + perPage());
     track.style.transform = "translateX(20px)";
     setTimeout(() => {
       track.style.transform = "translateX(0)";
       render();
     }, 200);
   });
+
+  // re-render saat resize supaya perPage ikut berubah
+  window.addEventListener("resize", render);
 
   load();
   return wrapper;

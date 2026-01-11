@@ -55,6 +55,24 @@
 .hero__desc { color: #e2e8f0; font-size: 16px; }
 .hero__cta { display: flex; gap: var(--s2); flex-wrap: wrap; }
 
+/* Testimonials */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--s3);
+}
+.testimonial-card {
+  background: #ffffff;
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s3);
+  box-shadow: var(--shadow-1);
+}
+.testimonial-card__name { font-weight: 700; color: var(--navy); }
+.testimonial-card__role { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+
+
+
 /* Controls */
 .controls-bar {
   display: flex; flex-wrap: wrap; gap: var(--s2);
@@ -107,7 +125,7 @@
 
 /* Grid */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
-@media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } }
+
 
 /* Schedule cards — premium & responsive */
 .schedule-grid {
@@ -115,9 +133,7 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--s3);
 }
-@media (max-width: 480px) {
-  .schedule-grid { grid-template-columns: 1fr; }
-}
+
 .slot-card {
   background: linear-gradient(145deg, #fff, #f6f9ff);
   border: 3px solid var(--border-strong);
@@ -136,7 +152,7 @@
 /* Form & modal */
 .form { display: grid; gap: var(--s3); }
 .form__row { display: grid; gap: var(--s3); grid-template-columns: 1fr 1fr; }
-@media (max-width: 860px) { .form__row { grid-template-columns: 1fr; } }
+
 .form__group { display: grid; gap: 8px; }
 .form__label { font-size: 14px; color: var(--navy); font-weight: 600; }
 .form__search { font-size: 16px; color: var(--bg); font-weight: 600; }
@@ -163,18 +179,3 @@
 .modal__title { font-weight: 700; color: var(--navy); }
 .modal__close { background: transparent; border: none; cursor: pointer; font-size: 20px; color: var(--muted); }
 
-/* Testimonials */
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--s3);
-}
-.testimonial-card {
-  background: #ffffff;
-  border: 3px solid var(--border);
-  border-radius: var(--radius);
-  padding: var(--s3);
-  box-shadow: var(--shadow-1);
-}
-.testimonial-card__name { font-weight: 700; color: var(--navy); }
-.testimonial-card__role { font-size: 13px; color: var(--muted); margin-bottom: 8px; }

@@ -38,10 +38,3 @@ img { display: block; max-width: 100%; }
   padding-bottom: var(--s6);
 }
 
-/* Mobile typography and spacing refinements */
-@media (max-width: 480px) {
-  .main-spacing { padding-top: var(--s4); padding-bottom: var(--s5); }
-  h1 { font-size: 18px; }
-  h2 { font-size: 16px; }
-  h3 { font-size: 14px; }
-}

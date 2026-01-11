@@ -1,2 +1,49 @@
 .page { display: grid; gap: var(--s3); }
 .hero--small { padding: var(--s4); }
+
+/* Mobile header nav stacking */
+@media (max-width: 640px) {
+  .header__inner { flex-direction: column; align-items: flex-start; gap: var(--s2); }
+}
+
+@media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .form__row { grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+  .schedule-grid { grid-template-columns: 1fr; }
+}
+
+/* Mobile typography and spacing refinements */
+@media (max-width: 480px) {
+  .main-spacing { padding-top: var(--s4); padding-bottom: var(--s5); }
+  h1 { font-size: 18px; }
+  h2 { font-size: 16px; }
+  h3 { font-size: 14px; }
+}
+
+/* Testimonial responsive */
+@media (max-width: 860px) {
+  .testimonial-card {
+    font-size: 14px;
+    padding: var(--s3);
+  }
+  .testimonial-card p {
+    font-size: 13px;
+  }
+  .testimonial-card__name {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .testimonial-card__role {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* grid testimonial jadi satu kolom */
+  .testimonial-track,
+  .section .grid-3,
+  .section .grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--s3);
+  }
+}
+
