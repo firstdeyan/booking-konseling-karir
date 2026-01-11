@@ -10,7 +10,7 @@ export const MONTHS = [
 ];
 
 /* Nomor WA: ganti ke nomor resmi ITB Career Center */
-export const WHATSAPP_TARGET = "https://wa.me/62895401502561";
+export const WHATSAPP_TARGET = "https://wa.me/6281111119463";
 
 /* Template pesan WA (format rapi) */
 export const WHATSAPP_TEMPLATE = ({
